@@ -1,0 +1,16 @@
+---
+layout: layouts/home.njk
+permalink: /projects/
+eleventyNavigation:
+  key: Projects
+  order: 1
+---
+
+<h1>My projects</h1>
+
+{% for post in collections.projects | reverse %}
+  <a href="{{ post.url | url }}" class="postlist-link">
+    {{ post.data.title }}
+    <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+  </a>
+{% endfor %}

@@ -1,0 +1,6 @@
+{
+  "tags": [
+    "posts"
+  ],
+  "permalink": "/blog/{{page.date | htmlDateString}}-{{page.fileSlug}}/"
+}

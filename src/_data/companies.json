@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Qumu",
+    "roles": [
+      {
+        "from": "August, 2019",
+        "to": "Present",
+        "name": "Lead frontend engineer"
+      },
+      {
+        "from": "August, 2017",
+        "to": "August, 2019",
+        "role": "Senior frontend engineer"
+      },
+      {
+        "from": "May, 2016",
+        "to": "August, 2017",
+        "role": "Frontend engineer"
+      }
+    ],
+    "url": "https://qumu.com"
+  },
+  {
+    "name": "Novastone Media",
+    "roles": [
+      {
+        "from": "September, 2015",
+        "to": "April, 2016",
+        "name": "Frontend engineer"
+      }
+    ],
+    "url": "https://novastone.co"
+  },
+  {
+    "name": "Akkroo",
+    "roles": [
+      {
+        "from": "May, 2015",
+        "to": "September, 2015",
+        "name": "Frontend/Backend software engineer"
+      }
+    ],
+    "url": "https://www.integrate-events.com"
+  },
+  {
+    "name": "AlyaCom",
+    "roles": [
+      {
+        "from": "November, 2012",
+        "to": "February, 2015",
+        "name": "Frontend/Backend software engineer"
+      }
+    ],
+    "url": "https://www.alyacom.fr"
+  }
+]

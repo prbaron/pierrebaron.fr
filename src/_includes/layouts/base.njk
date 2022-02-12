@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/styles/normalize.css' | url }}">
+    <link rel="stylesheet" href="{{ '/styles/style.css' | url }}">
+    <link rel="stylesheet" href="{{ '/styles/prism.css' | url }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+  </head>
+  <body>
+    <header class="header">
+      <a href="{{ '/' | url }}" class="header__logo" aria-label="{{ metadata.title }}">
+        <svg width="36" height="27" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path
+                fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.158 1.053a2.074 2.074 0 00-.826-.55A2.921 2.921 0 003.24.309H0v8.376h1.812V5.638H3.24c.086 0 .17-.003.252-.008l1.666-4.577zm.854 3.5v4.133h3.216c.8 0 1.42-.208 1.86-.624.448-.416.672-.976.672-1.68 0-.568-.144-1.012-.432-1.332-.28-.32-.68-.544-1.2-.672v-.072c.44-.128.776-.332 1.008-.612.24-.288.36-.672.36-1.152 0-.688-.22-1.232-.66-1.632-.432-.4-1.06-.6-1.884-.6H7.556L6.012 4.553zm-4.2-.367h.972c.424 0 .716-.08.876-.24.168-.16.252-.424.252-.792v-.36c0-.368-.084-.632-.252-.792-.16-.16-.452-.24-.876-.24h-.972v2.424zm6.864 3.24c.432 0 .748-.072.948-.216.2-.144.3-.408.3-.792V6.07c0-.384-.1-.648-.3-.792-.2-.144-.516-.216-.948-.216h-.912v2.364h.912zm-.228-3.564c.424 0 .732-.068.924-.204.192-.144.288-.4.288-.768v-.36c0-.368-.096-.62-.288-.756-.192-.136-.5-.204-.924-.204h-.684v2.292h.684z"
+                fill="currentColor"
+            />
+            <path d="M2.79 9l3.275-9H7.13L3.854 9H2.79z" fill="#006FED"/>
+          </g>
+        </svg>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="">
+          {%- for entry in collections.all | eleventyNavigation %}
+            <li
+                class="header__navItem{% if entry.url == page.url %} header__navItem--active{% endif %}"
+                {% if entry.url == page.url %}aria-current="page"{% endif %}
+            >
+              <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
