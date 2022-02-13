@@ -7,6 +7,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItContainer = require('markdown-it-container');
 const { createContainer } = require('./eleventy/container');
 const slugify = require('@sindresorhus/slugify');
+const _ = require("lodash");
 
 module.exports = function (eleventyConfig) {
   // Add plugins
@@ -19,13 +20,16 @@ module.exports = function (eleventyConfig) {
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
 
-  eleventyConfig.addFilter('readableDate', dateObj => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('dd LLL yyyy');
-  });
+  eleventyConfig.addFilter('readableDate', (dateObj, format) => {
+    if (!dateObj) {
+      return 'now';
+    }
 
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+    if (typeof dateObj === 'string') {
+      dateObj = new Date(dateObj);
+    }
+
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(format || 'LLLL yyyy');
   });
 
   // Copy the `img` and `css` folders to the output
@@ -83,6 +87,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary('md', markdownLibrary);
 
+  eleventyConfig.setFrontMatterParsingOptions({
+    excerpt: true,
+    excerpt_separator: "<!-- excerpt -->"
+  });
+
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
@@ -99,6 +108,14 @@ module.exports = function (eleventyConfig) {
     },
     ui: false,
     ghostMode: false
+  });
+
+  eleventyConfig.addCollection("jobsByCompany", (collection) => {
+    return _.chain(collection.getFilteredByTag('jobs'))
+      .sortBy((job) => new Date(job.data.start))
+      .reverse()
+      .groupBy((job) => job.data.company)
+      .value();
   });
 
   return {
