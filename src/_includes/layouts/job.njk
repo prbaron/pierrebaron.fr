@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+templateClass:
+---
+
+<article class="container post">
+  <header>
+    <h1>{{ title }}</h1>
+    <h2>{{ company }}</h2>
+    <div class="text-muted">
+      <time datetime="{{ start | jobDateString }}">{{ start | jobDateString }}</time> - <time datetime="{{ end | jobDateString }}">{{ end | jobDateString }}</time>
+    </div>
+  </header>
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

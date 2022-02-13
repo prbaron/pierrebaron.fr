@@ -1,7 +1,7 @@
 ---
 title: New Player
 description: New player
-layout: layouts/post.njk
+layout: layouts/project.njk
 ---
 
 ## The project

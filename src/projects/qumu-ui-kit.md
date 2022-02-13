@@ -1,7 +1,7 @@
 ---
 title: UI Kit
 description: UI Kit
-layout: layouts/post.njk
+layout: layouts/project.njk
 thumbnail: /img/projects/ui-kit.png
 ---
 

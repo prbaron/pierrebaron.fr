@@ -1,0 +1,6 @@
+{
+  "tags": [
+    "jobs"
+  ],
+  "permalink": "/jobs/{{page.fileSlug}}/"
+}

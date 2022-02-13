@@ -30,23 +30,10 @@ layout: layouts/home.njk
 <h2>Where I have lived</h2>
 
 <ul>
-  {% for location in locations %}
-    <li>{{ location.from }} - {{ location.to }}: {{ location.name }}</li>
-  {% endfor %}
+  {%- for location in locations -%}
+    <li>{{ location.from | readableDate('yyyy') }} - {{ location.to | readableDate('yyyy') }}: {{ location.name }} {{ location.flag }}</li>
+  {%- endfor -%}
 </ul>
-
-<h2>The companies I worked at</h2>
-
-<section>
-  {% for company in companies %}
-    <div><a href="{{ company.url }}">{{ company.name }}</a></div>
-    <ul>
-      {% for role in company.roles %}
-        <li>{{ role.from }} - {{ role.to }}: {{ role.name }}</li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-</section>
 
 <h2>What I love</h2>
 
@@ -54,14 +41,14 @@ layout: layouts/home.njk
 
 <p>I received my first console (a Sega Master System) at 8yo. Since then, I spent countless hours killing monsters or solving puzzles.<br/>Here is a list of the most memorable games I played.</p>
 <section class="masonry">
-  {% for game in games %}
-    <a href="{{ game.url }}" class="masonry__item">
-      <img src="{{ game.thumbnail }}" alt="{{ game.name }}"/>
+  {%- for game in games -%}
+    <a href="{{ game.url }}" class="masonry__item" aria-label="View {{ game.name }} on {{ game.platform }} on Metacritic">
+      <img src="{{ game.thumbnail }}" alt="{{ game.name }}" loading="lazy"/>
       <div class="masonry__metadata">
         <div>{{ game.name }}</div>
       </div>
     </a>
-  {% endfor %}
+  {%- endfor -%}
 </section>
 
 <h3>Comics</h3>
@@ -70,28 +57,28 @@ layout: layouts/home.njk
   Here are a few of my favourite ones.</p>
 
 <section class="masonry">
-  {% for comic in comics %}
-    <a href="{{ comic.url }}" class="masonry__item">
-      <img src="{{ comic.thumbnail }}" alt="{{ comic.name }}"/>
+  {%- for comic in comics -%}
+    <a href="{{ comic.url }}" class="masonry__item" aria-label="View {{ comic.name }} on {{ comic.website }}">
+      <img src="{{ comic.thumbnail }}" alt="{{ comic.name }}" loading="lazy"/>
       <div class="masonry__metadata">
         <div>{{ comic.name }}</div>
       </div>
     </a>
-  {% endfor %}
+  {%- endfor -%}
 </section>
 
 <h3>Music</h3>
 
 <section>
   <ul class="list-unstyled">
-    {% for year, tracks in songs %}
+    {%- for year, tracks in songs -%}
       <li>
         <h4>{{ year }}</h4>
-        <ul class="list-unstyled">
-          {% for track in tracks %}
+        <ol class="list-unstyled">
+          {%- for track in tracks -%}
             <li class="track">
-              <a href="{{ track.url }}">
-                <img src="{{ track.album.thumbnail }}" alt="{{ track.album.name }}">
+              <a href="{{ track.url }}" class="btn btn-secondary btn-transparent" aria-label="Play {{ track.name }} by {{ track.artist }} on Spotify">
+                <img src="{{ track.album.thumbnail }}" alt="{{ track.album.name }}" loading="lazy">
                 <div class="track_metadata">
                   <div>{{ track.name }}</div>
                   <div class="text-muted"><small>{{ track.artist }}</small></div>
@@ -104,6 +91,7 @@ layout: layouts/home.njk
                       height="26"
                       fill="currentColor"
                       viewBox="0 0 256 256"
+                      aria-hidden="true"
                   >
                     <rect width="256" height="256" fill="none"></rect>
                     <path
@@ -114,9 +102,9 @@ layout: layouts/home.njk
                 </div>
               </a>
             </li>
-          {% endfor %}
-        </ul>
+          {%- endfor -%}
+        </ol>
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </section>

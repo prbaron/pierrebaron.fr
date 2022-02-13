@@ -1,0 +1,19 @@
+---
+layout: layouts/home.njk
+permalink: /jobs/
+eleventyNavigation:
+  key: Jobs
+  order: 1
+---
+
+<h1>The companies I worked at</h1>
+
+{% for company, jobs in collections.jobsByCompany %}
+  <h2>{{ company }}</h2>
+    {% for job in jobs %}
+      <a href="{{ job.url | url }}" >
+        <div><strong>{{ job.data.title }}</strong></div>
+        <p>{{ job.data.start | jobDateString}} - {{ job.data.end | jobDateString}}</p>
+      </a>
+    {% endfor %}
+{% endfor %}

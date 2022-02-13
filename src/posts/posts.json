@@ -2,5 +2,5 @@
   "tags": [
     "posts"
   ],
-  "permalink": "/blog/{{page.date | htmlDateString}}-{{page.fileSlug}}/"
+  "permalink": "/blog/{{page.date | readableDate('yyyy-LL-dd')}}-{{page.fileSlug}}/"
 }
