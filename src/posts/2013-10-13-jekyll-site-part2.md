@@ -9,8 +9,8 @@ demo: http://pierrebaron.fr/tuto_blog_jekyll/
 download: https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre2
 ---
 
-
 Nous allons voir dans ce deuxième chapitre le fonctionnement de Jekyll et nous allons commencer à développer en créant nos premières pages statiques.
+<!-- excerpt -->
 
 1. [Partie 1 - Introduction & Installation]({{ '/blog/2013-10-13-jekyll-site-part1' | url }})
 2. [Partie 2 - Création des pages]({{ '/blog/2013-10-13-jekyll-site-part2' | url }})

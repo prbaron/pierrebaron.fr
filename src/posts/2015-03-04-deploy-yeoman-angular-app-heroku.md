@@ -6,10 +6,11 @@ tags: ['tutorial']
 layout: layouts/post.njk
 keywords: heroku, yeoman, angular, angularjs, deploy, déploiement
 demo : https://deployangularjsheroku.herokuapp.com/#/
-download : https://github.com/prbaron/tuto_deploy_yeoman_angular_heroku---
+download : https://github.com/prbaron/tuto_deploy_yeoman_angular_heroku
 ---
 
 Beaucoup de tutoriels sur Internet vous expliquent comment déployer une application Yeoman/AngularJS avec Heroku. Cependant, elles ont toutes un souci, l'ajout du dossier **dist** (contenant les fichiers compilés) dans le repository Git. J'ai donc décidé d'écrire mon propre tutoriel en ayant à l'esprit que le repository Git ne doit contenir que les sources. La génération finale sera effectuée par Heroku.
+<!-- excerpt -->
 
 Dans ce tutoriel, nous allons voir comment déployer une application AngularJS créée par le générateur [generator-angular](https://github.com/yeoman/generator-angular). Ce tutoriel est basé sur [http://www.sitepoint.com/deploying-yeomanangular-app-heroku/](http://awaxman11.github.io/blog/2014/07/13/how-to-create-an-angular-app-using-yeoman-and-deploy-it-to-heroku/). 
 

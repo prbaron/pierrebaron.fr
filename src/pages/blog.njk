@@ -6,13 +6,16 @@ eleventyNavigation:
   order: 3
 ---
 
-<h1>Blog</h1>
+<h1 class="title">Blog</h1>
 
-<ol class="postlist">
+<ol class="list-unstyled">
   {% for post in collections.posts | reverse %}
-    <li class="postlist-item">
-      <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-      <time class="postlist-date" datetime="{{ post.date | readableDate('yyyy-LL-dd') }}">{{ post.date | readableDate }}</time>
+    <li class="blog-post">
+      <a href="{{ post.url | url }}">
+        <h2>{{ post.data.title }}</h2>
+      </a>
+      {{ post.data.page.excerpt | safe }}
+      <time datetime="{{ post.date | readableDate('yyyy-LL-dd') }}">{{ post.date | readableDate }}</time>
     </li>
   {% endfor %}
 </ol>

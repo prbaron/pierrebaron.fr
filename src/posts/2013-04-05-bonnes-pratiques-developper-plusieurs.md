@@ -8,6 +8,7 @@ keywords : bonnes pratique, développement plusieurs, projet web, projet mobile
 ---
 
 Vous souhaitez réaliser un projet complet et ne savez pas comment vous y prendre ? Vous trouvez qu'il manque un petit quelque chose pour que votre projet devienne incontournable ? Nous allons ici lister les bonnes pratiques, utilisées en entreprise, afin de mener efficacement un projet à son terme.
+<!-- excerpt -->
 
 ### Analysez
 Bien qu'elle ne soit pas la plus stimulante, la phase de définition du projet est une phase très importante de votre projet. Plus votre projet sera correctement défini, plus le développement sera aisé. Dans cette phase, vous devez être capable de répondre à ces questions :

@@ -5,10 +5,14 @@ date: 2014-08-23
 tags: ['tutorial']
 layout: layouts/post.njk
 keywords: functional programming, programmation fonctionnelle
-note: "Je tiens à remercier M. Alexandre Delattre pour m'avoir formé à la programmation fonctionnelle, ainsi que pour la relecture et l'amélioration de cet article."
 ---
 
 La programmation fonctionnelle est un paradigme de programmation (au même titre que la programmation procédurale ou objet). De la même manière que la programmation fonctionnelle est une évolution de la programmation procédurale, la programmation fonctionnelle est une évolution de la programmation objet. Celle ci peut être utilisée en complément de ces deux paradigmes.
+<!-- excerpt -->
+
+:::info
+Je tiens à remercier M. Alexandre Delattre pour m'avoir formé à la programmation fonctionnelle, ainsi que pour la relecture et l'amélioration de cet article.
+:::
 
 ## Les concepts et avantages
 La programmation fonctionnelle repose sur plusieurs principes :

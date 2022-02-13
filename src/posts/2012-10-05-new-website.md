@@ -7,6 +7,7 @@ layout: layouts/post.njk
 ---
 
 Hey guys! I decided to create a new website to replace my old one. What should be a project to learn CakePHP finally became my all new website. That iss the reason why I am proud to announce pierrebaron.fr v1.0!
+<!-- excerpt -->
 
 ### What's new
 

@@ -10,6 +10,7 @@ download: https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre3
 ---
 
 Maintenant que nous avons nos pages statiques, nous allons créer la base de notre blog, à savoir les pages de listing d'articles, ainsi que les pages permettant de lire l'article au complet.
+<!-- excerpt -->
 
 1. [Partie 1 - Introduction & Installation]({{ '/blog/2013-10-13-jekyll-site-part1' | url }})
 2. [Partie 2 - Création des pages]({{ '/blog/2013-10-13-jekyll-site-part2' | url }})

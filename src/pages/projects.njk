@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 2
 ---
 
-<h1>My projects</h1>
+<h1 class="title">My projects</h1>
 
 {% for post in collections.projects | reverse %}
   <a href="{{ post.url | url }}" class="postlist-link">

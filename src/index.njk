@@ -4,107 +4,109 @@ layout: layouts/home.njk
 
 <h1 class="title">Hey!<br/>I am Pierre Baron<br/>Frontend developer</h1>
 
-<h2>About me</h2>
+<div class="prose">
+  <h2>About me</h2>
 
-<p>I was born in France, Brittany. I got my first console (Sega Master System) at 7 and became an avid gamer since! I even wanted to become a game developer at the time. I actually got my first
-  computer quite late (around 17 yo) but I quickly caught up and rapidly learned HTML, CSS, JS and Flash.</p>
+  <p>I was born in France, Brittany. I got my first console (Sega Master System) at 7 and became an avid gamer since! I even wanted to become a game developer at the time. I actually got my first
+    computer quite late (around 17 yo) but I quickly caught up and rapidly learned HTML, CSS, JS and Flash.</p>
 
-<p>After high school, I started my university journey with a 2-year course (IUT in French) in Electricity and Computer Science. During the last year, I discovered home automation via a friend and
-  decided to enter an engineer school. In 2012, I got accepted to follow a 3-year course at ESIR (Ecole Supérieure d'Ingénieurs de Rennes) specialised in computer science and home automation. During
-  my cursus, I realised that I loved building web applications and therefore decided to focus myself on improving my web development skills.</p>
-<p>My first job was in a startup providing a management platform for healthcare services. While this job was full-stack, I assumed the frontend developer role more and more and decided to become an
-  expert. After all, I always loved providing clean and intuitive user experiences so it made lots of sense!</p>
-<p>I continued my frontend development adventure through several companies until I found Qumu. This company allowed me to refine my frontend skills and learn a lot about web technologies (WebRTC,
-  HLS, ...) and accessibility.</p>
-<p>I am now an avid fan of accessibility (maybe from my past as a home automation engineer?) and I try to learn about it every day.</p>
+  <p>After high school, I started my university journey with a 2-year course (IUT in French) in Electricity and Computer Science. During the last year, I discovered home automation via a friend and
+    decided to enter an engineer school. In 2012, I got accepted to follow a 3-year course at ESIR (Ecole Supérieure d'Ingénieurs de Rennes) specialised in computer science and home automation. During
+    my cursus, I realised that I loved building web applications and therefore decided to focus myself on improving my web development skills.</p>
+  <p>My first job was in a startup providing a management platform for healthcare services. While this job was full-stack, I assumed the frontend developer role more and more and decided to become an
+    expert. After all, I always loved providing clean and intuitive user experiences so it made lots of sense!</p>
+  <p>I continued my frontend development adventure through several companies until I found Qumu. This company allowed me to refine my frontend skills and learn a lot about web technologies (WebRTC,
+    HLS, ...) and accessibility.</p>
+  <p>I am now an avid fan of accessibility (maybe from my past as a home automation engineer?) and I try to learn about it every day.</p>
 
-<figure>
-  <blockquote>
-    Let's all work to make the web faster, simpler and more accessible
-  </blockquote>
-  <figcaption>
-    &ndash; Pierre Baron, 2021
-  </figcaption>
-</figure>
+  <figure>
+    <blockquote>
+      Let's all work to make the web faster, simpler and more accessible
+    </blockquote>
+    <figcaption>
+      &ndash; Pierre Baron, 2021
+    </figcaption>
+  </figure>
 
-<h2>Where I have lived</h2>
+  <h2>Where I have lived</h2>
 
-<ul>
-  {%- for location in locations -%}
-    <li>{{ location.from | readableDate('yyyy') }} - {{ location.to | readableDate('yyyy') }}: {{ location.name }} {{ location.flag }}</li>
-  {%- endfor -%}
-</ul>
-
-<h2>What I love</h2>
-
-<h3>Games</h3>
-
-<p>I received my first console (a Sega Master System) at 8yo. Since then, I spent countless hours killing monsters or solving puzzles.<br/>Here is a list of the most memorable games I played.</p>
-<section class="masonry">
-  {%- for game in games -%}
-    <a href="{{ game.url }}" class="masonry__item" aria-label="View {{ game.name }} on {{ game.platform }} on Metacritic">
-      <img src="{{ game.thumbnail }}" alt="{{ game.name }}" loading="lazy"/>
-      <div class="masonry__metadata">
-        <div>{{ game.name }}</div>
-      </div>
-    </a>
-  {%- endfor -%}
-</section>
-
-<h3>Comics</h3>
-
-<p>I am an avid comic books reader. Being French/Belgium comics, US comics or Japanese manga, I can read everything! My collection currently contains around 600 volumes.<br/>
-  Here are a few of my favourite ones.</p>
-
-<section class="masonry">
-  {%- for comic in comics -%}
-    <a href="{{ comic.url }}" class="masonry__item" aria-label="View {{ comic.name }} on {{ comic.website }}">
-      <img src="{{ comic.thumbnail }}" alt="{{ comic.name }}" loading="lazy"/>
-      <div class="masonry__metadata">
-        <div>{{ comic.name }}</div>
-      </div>
-    </a>
-  {%- endfor -%}
-</section>
-
-<h3>Music</h3>
-
-<section>
-  <ul class="list-unstyled">
-    {%- for year, tracks in songs -%}
-      <li>
-        <h4>{{ year }}</h4>
-        <ol class="list-unstyled">
-          {%- for track in tracks -%}
-            <li class="track">
-              <a href="{{ track.url }}" class="btn btn-secondary btn-transparent" aria-label="Play {{ track.name }} by {{ track.artist }} on Spotify">
-                <img src="{{ track.album.thumbnail }}" alt="{{ track.album.name }}" loading="lazy">
-                <div class="track_metadata">
-                  <div>{{ track.name }}</div>
-                  <div class="text-muted"><small>{{ track.artist }}</small></div>
-                </div>
-
-                <div class="track_play">
-                  <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="26"
-                      fill="currentColor"
-                      viewBox="0 0 256 256"
-                      aria-hidden="true"
-                  >
-                    <rect width="256" height="256" fill="none"></rect>
-                    <path
-                        d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z" fill="none" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="16"
-                    ></path>
-                  </svg>
-                </div>
-              </a>
-            </li>
-          {%- endfor -%}
-        </ol>
-      </li>
+  <ul>
+    {%- for location in locations -%}
+      <li>{{ location.from | readableDate('yyyy') }} - {{ location.to | readableDate('yyyy') }}: {{ location.name }} {{ location.flag }}</li>
     {%- endfor -%}
   </ul>
-</section>
+
+  <h2>What I love</h2>
+
+  <h3>Games</h3>
+
+  <p>I received my first console (a Sega Master System) at 8yo. Since then, I spent countless hours killing monsters or solving puzzles.<br/>Here is a list of the most memorable games I played.</p>
+  <section class="masonry">
+    {%- for game in games -%}
+      <a href="{{ game.url }}" class="masonry__item" aria-label="View {{ game.name }} on {{ game.platform }} on Metacritic">
+        <img src="{{ game.thumbnail }}" alt="{{ game.name }}" loading="lazy"/>
+        <div class="masonry__metadata">
+          <div>{{ game.name }}</div>
+        </div>
+      </a>
+    {%- endfor -%}
+  </section>
+
+  <h3>Comics</h3>
+
+  <p>I am an avid comic books reader. Being French/Belgium comics, US comics or Japanese manga, I can read everything! My collection currently contains around 600 volumes.<br/>
+    Here are a few of my favourite ones.</p>
+
+  <section class="masonry">
+    {%- for comic in comics -%}
+      <a href="{{ comic.url }}" class="masonry__item" aria-label="View {{ comic.name }} on {{ comic.website }}">
+        <img src="{{ comic.thumbnail }}" alt="{{ comic.name }}" loading="lazy"/>
+        <div class="masonry__metadata">
+          <div>{{ comic.name }}</div>
+        </div>
+      </a>
+    {%- endfor -%}
+  </section>
+
+  <h3>Music</h3>
+
+  <section>
+    <ul class="list-unstyled">
+      {%- for year, tracks in songs -%}
+        <li>
+          <h4>{{ year }}</h4>
+          <ol class="list-unstyled">
+            {%- for track in tracks -%}
+              <li class="track">
+                <a href="{{ track.url }}" class="btn btn-secondary btn-transparent" aria-label="Play {{ track.name }} by {{ track.artist }} on Spotify">
+                  <img src="{{ track.album.thumbnail }}" alt="{{ track.album.name }}" loading="lazy">
+                  <div class="track_metadata">
+                    <div>{{ track.name }}</div>
+                    <div class="text-muted"><small>{{ track.artist }}</small></div>
+                  </div>
+
+                  <div class="track_play">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="currentColor"
+                        viewBox="0 0 256 256"
+                        aria-hidden="true"
+                    >
+                      <rect width="256" height="256" fill="none"></rect>
+                      <path
+                          d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z" fill="none" stroke="currentColor" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="16"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ol>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+</div>

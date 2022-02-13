@@ -1,5 +1,5 @@
 ---
-title: Créer un site avec Jekyll. Partie 2 - Finitions
+title: Créer un site avec Jekyll. Partie 5 - Finitions
 description: ''
 date: 2014-02-08
 tags: ['tutorial']
@@ -10,6 +10,7 @@ download: https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre5
 ---
 
 Notre site est presque prêt, nous allons maintenant ajouter les dernières fonctionnalités pour qu'il soit complet.
+<!-- excerpt -->
 
 1. [Partie 1 - Introduction & Installation]({{ '/blog/2013-10-13-jekyll-site-part1' | url }})
 2. [Partie 2 - Création des pages]({{ '/blog/2013-10-13-jekyll-site-part2' | url }})

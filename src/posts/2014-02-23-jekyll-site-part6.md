@@ -1,5 +1,5 @@
 ---
-title: Créer un site avec Jekyll. Partie 2 - Déploiement
+title: Créer un site avec Jekyll. Partie 6 - Déploiement
 description: ''
 date: 2014-02-23
 tags: ['tutorial']
@@ -9,6 +9,7 @@ demo: http://pierrebaron.fr/tuto_blog_jekyll/
 ---
 
 Notre site est terminé, nous allons maintenant le rendre accessible au monde entier.
+<!-- excerpt -->
 
 1. [Partie 1 - Introduction & Installation]({{ '/blog/2013-10-13-jekyll-site-part1' | url }})
 2. [Partie 2 - Création des pages]({{ '/blog/2013-10-13-jekyll-site-part2' | url }})

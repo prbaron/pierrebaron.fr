@@ -26,12 +26,14 @@ Our previous player looked outdated, and it was hard to implement new features. 
 
 The new player had to check the following requirements:
 
-- small and fast
-    - We want the viewers to play the video as fast as possible. Providing a small javascript bundle is only one part of the equation but it is still an important one. As such, any 1st and 3rd party code was thoroughly reviewed to make sure that the code is both understandable from a human and as small as possible
-- accessible
-    - We want the player to be usable by everybody. As such, we needed to put a big focus on accessibility. The player needs to work with all the different assistive technologies available nowadays.
-- extensible
-    - While we had a fixed set of features for the initial phase, we knew we would add more features through the years. We had to make sure that the code caters for future additions.
+**small and fast**
+We want the viewers to play the video as fast as possible. Providing a small javascript bundle is only one part of the equation but it is still an important one. As such, any 1st and 3rd party code was thoroughly reviewed to make sure that the code is both understandable from a human and as small as possible
+
+**accessible**
+We want the player to be usable by everybody. As such, we needed to put a big focus on accessibility. The player needs to work with all the different assistive technologies available nowadays.
+
+**extensible**
+While we had a fixed set of features for the initial phase, we knew we would add more features through the years. We had to make sure that the code caters for future additions.
 
 ## Choosing a technical stack
 

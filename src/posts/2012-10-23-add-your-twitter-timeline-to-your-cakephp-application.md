@@ -9,6 +9,7 @@ keywords : cakephp, cakephp twitter timeline
 ---
 
 Twitter just changed its API, so I decided to write my own library to display my Twitter feeds on my website.
+<!-- excerpt -->
 
 Today, I will share it to you and I will teach you how to use it in your CakePHP website. The first thing you have to do is to [download the class](https://gist.github.com/prbaron/4725934) and to place it in you Lib folder.
 

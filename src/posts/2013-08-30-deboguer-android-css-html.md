@@ -8,6 +8,7 @@ keywords : débogage, débuggage, android, web, mobile
 ---
 
 Comme vous le savez tous, le développement web mobile peut être un peu fastidieux, lorsqu'il s'agit de déboguer du code JavaScript exécuté uniquement sur un téléphone par exemple.
+<!-- excerpt -->
 
 Il existe des sites permettant de tester votre site sous différentes résolutions ([http://screenqueri.es/](http://screenqueri.es/) en est un exemple parmi tant d'autres) mais il est plus difficile d'analyser le DOM, de tester du code sans mettre des <code>alert()</code> partout. 
 

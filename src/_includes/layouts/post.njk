@@ -5,10 +5,21 @@ templateClass:
 
 <article class="container post">
   <header>
-    <h1>{{ title }}</h1>
-    <time class="text-muted" datetime="{{ page.date | readableDate('yyyy-LL-dd')}}">{{ page.date | readableDate }}</time>
+    <h1 class="title">{{ title }}</h1>
+    <div>
+      <time class="text-muted" datetime="{{ page.date | readableDate('yyyy-LL-dd') }}">{{ page.date | readableDate }}</time>
+    </div>
+    {%- if(demo or download) %}
+      {%- if(demo) %}
+        <a href="{{ demo | url }}" class="btn btn-primary">Demonstration</a>
+      {%- endif %}
+      {%- if(download) %}
+        <a href="{{ download | url }}" class="btn btn-inverse">Sources</a>
+      {%- endif %}
+    {%- endif %}
   </header>
   <div class="prose">
+
     {{ content | safe }}
   </div>
 </article>

@@ -9,7 +9,7 @@ demo: http://pierrebaron.fr/tuto_blog_jekyll/
 ---
 
 Lorsque l'on souhaite écrire un blog nous avons plusieurs solutions. Le CMS tel que WordPress, la plate-forme hébergée comme Blogger ou bien créer un site personnel avec un framework. On oublie bien souvent les générateurs de blogs statiques. Dans cette série de tutoriels, nous allons voir comment créer un site avec Jekyll et l'héberger sur GitHub.
-<a href="{{ '/posts/firstpost/' | url }}">First post</a>
+<!-- excerpt -->
 
   1. [Partie 1 - Introduction & Installation]({{ '/blog/2013-10-13-jekyll-site-part1' | url }})
   2. [Partie 2 - Création des pages]({{ '/blog/2013-10-13-jekyll-site-part2' | url }})

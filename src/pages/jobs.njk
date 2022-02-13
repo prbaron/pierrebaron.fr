@@ -6,14 +6,25 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>The companies I worked at</h1>
+<h1 class="title">The companies I worked at</h1>
 
-{% for company, jobs in collections.jobsByCompany %}
-  <h2>{{ company }}</h2>
-    {% for job in jobs %}
-      <a href="{{ job.url | url }}" >
-        <div><strong>{{ job.data.title }}</strong></div>
-        <p>{{ job.data.start | jobDateString}} - {{ job.data.end | jobDateString}}</p>
-      </a>
-    {% endfor %}
-{% endfor %}
+<ul class="list-unstyled">
+  {% for company, jobs in collections.jobsByCompany %}
+    <li class="company">
+      <div class="company__metadata">
+        <img src="/img/companies/{{ company | lower | replace(' ', '-') }}.jpg" alt="{{ company }}" height="48">
+        <strong>{{ company }}</strong>
+      </div>
+      <ol class="list-unstyled jobs">
+        {% for job in jobs %}
+          <li>
+            <a href="{{ job.url | url }}" class="btn btn-secondary btn-transparent btn-block text-left">
+              <div>{{ job.data.title }}</div>
+              <div class="text-muted">{{ job.data.start | readableDate }} - {{ job.data.end | readableDate }}</div>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </li>
+  {% endfor %}
+</ul>

@@ -9,6 +9,7 @@ keywords : cakephp, grafikart media plugin
 ---
 
 Today I want to share an awesome plugin created by [Grafikart](http://www.grafikart.fr/) called [CakePHP-Media](https://github.com/Grafikart/CakePHP-Media). You can download the v1.1 (improvements listed below) from my fork : [https://github.com/prbaron/CakePHP-Media](https://github.com/prbaron/CakePHP-Media)
+<!-- excerpt -->
 
 ### The plugin
 The plugin adds a tinymce editor and a custom plugin in order to easily add images into your content. You can add/delete/ organise your images. You can choose an image as post image.

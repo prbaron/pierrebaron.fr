@@ -6,12 +6,21 @@
   --pb-title-from-color: #4994fc;
   --pb-title-to-color: #8749fc;
 
+  --pb-job-line-color: #b9cdff;
+
   --pb-text-muted: #697697;
 
   --pb-btn-transparent-hover-bg: #f2f4fa;
 
   --pb-track-play-bg: #51c693;
   --pb-track-play-color: #f2f4fa;
+
+  --pb-alert-info-bg: #dbe5ff;
+  --pb-alert-info-color: #072a83;
+  --pb-alert-danger-bg: #fbc3c3;
+  --pb-alert-danger-color: #6b0201;
+  --pb-alert-warning-bg: #ffecb5;
+  --pb-alert-warning-color: #574204;
 }
 
 
@@ -28,8 +37,10 @@
     --pb-title-from-color: #4994fc;
     --pb-title-to-color: #67e0e4;
 
+    --pb-job-line-color: #2d447c;
+
     --pb-text-muted: #8fa2d5;
-    --pb-btn-transparent-hover-bg: #121b31;
+    --pb-btn-transparent-hover-bg: #17223d;
     --pb-track-play-bg: #399b71;
     --pb-track-play-color: #121b31;
   }
@@ -158,7 +169,7 @@ a:hover {
 }
 
 /**
- * Index
+ * Index page
  */
 
 .title {
@@ -169,6 +180,12 @@ a:hover {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+
+  font-size: 4.25rem;
+  font-weight: 800;
+  line-height: 4.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .masonry {
@@ -232,8 +249,6 @@ a:hover {
   display: flex;
   justify-content: flex-start;
   text-decoration: none !important;
-  padding: 8px;
-  margin: 0 -12px;
 }
 
 .track img {
@@ -267,6 +282,60 @@ a:hover {
 
 
 /**
+ * Jobs page
+ */
+
+.company__metadata {
+  display: flex;
+  align-items: center;
+}
+
+.company__metadata > img {
+  margin-right: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 4px var(--pb-body-bg), 0 0 0 6px var(--pb-job-line-color);
+}
+
+.jobs {
+  border-left: 2px solid var(--pb-job-line-color);
+  margin-left: 24px;
+  padding-bottom: 48px !important;
+  padding-top: 12px !important;
+}
+
+.company:last-child .jobs {
+  padding-bottom: 0 !important;
+}
+
+.jobs > li {
+  position: relative;
+}
+
+.jobs > li::before {
+  position: absolute;
+  background-color: var(--pb-job-line-color);
+  height: 8px;
+  width: 8px;
+  border-radius: 8px;
+  content: "";
+  top: 50%;
+  left: -5px;
+  margin-top: -4px;
+  z-index: 3;
+  box-shadow: 0 0 0 4px var(--pb-body-bg), 0 0 0 6px var(--pb-job-line-color);
+}
+
+
+/**
+ * Blog page
+ */
+
+.blog-post {
+
+}
+
+
+/**
  * Container
  */
 
@@ -280,19 +349,11 @@ a:hover {
  * POST
  */
 
-.post {
-  margin-top: 3rem;
-}
-
 .post header {
   margin-bottom: 3rem;
 }
 
 .post header h1 {
-  font-size: 4.25rem;
-  font-weight: 800;
-  line-height: 4.5rem;
-  margin-top: 0;
   margin-bottom: .25rem;
 }
 
@@ -335,8 +396,8 @@ a:hover {
   display: inline-block;
   width: 100%;
 
-  background-color: #6366f1;
-  background-image: linear-gradient(45deg, #a855f7, #6366f1);
+  background-color: var(--pb-link-color);
+  background-image: linear-gradient(45deg, var(--pb-title-from-color), var(--pb-title-to-color));
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -356,6 +417,30 @@ a:hover {
   text-decoration: underline;
 }
 
+.alert {
+  border-radius: 6px;
+  padding: 16px 24px;
+  margin-bottom: 1.5rem;
+}
+
+.alert p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+.alert--info {
+  background-color: var(--pb-alert-info-bg);
+  color: var(--pb-alert-info-color);
+}
+
+.alert--danger {
+  background-color: var(--pb-alert-danger-bg);
+  color: var(--pb-alert-danger-color);
+}
+
+.alert--warning {
+  background-color: var(--pb-alert-warning-bg);
+  color: var(--pb-alert-warning-color);
+}
 
 /**
  * PROSE
@@ -523,9 +608,16 @@ a.btn {
 
 .btn-primary,
 a.btn-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+  color: var(--pb-body-bg);
+  background-color: var(--pb-link-color);
+  border-color: var(--pb-link-color);
+}
+
+.btn-inverse,
+a.btn-inverse {
+  color: var(--pb-body-bg);
+  background-color: var(--pb-body-color);
+  border-color: var(--pb-body-color);
 }
 
 .btn-secondary.btn-transparent {
@@ -536,6 +628,17 @@ a.btn-primary {
   background-color: var(--pb-btn-transparent-hover-bg);
 }
 
+
+
+
+
+.btn-block {
+  width: 100%;
+}
+
+.text-left {
+  text-align: left;
+}
 
 .list-unstyled {
   list-style: none;

@@ -1,5 +1,5 @@
 ---
-title: Créer un site avec Jekyll. Partie 2 - les catégories
+title: Créer un site avec Jekyll. Partie 4 - les catégories
 description: ''
 date: 2014-02-08
 tags: ['tutorial']
@@ -10,6 +10,7 @@ download: https://github.com/prbaron/tuto_blog_jekyll/tree/chapitre4
 ---
 
 Nous avons pu voir, dans le chapitre 3, comment créer notre blog avec Jekyll. Cependant, celui ci est encore basique car il ne possède pas de catégorie ou de système de commentaires (nous règlerons ceci dans le chapitre 5).
+<!-- excerpt -->
 
 1. [Partie 1 - Introduction & Installation]({{ '/blog/2013-10-13-jekyll-site-part1' | url }})
 2. [Partie 2 - Création des pages]({{ '/blog/2013-10-13-jekyll-site-part2' | url }})
