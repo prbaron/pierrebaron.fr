@@ -89,7 +89,7 @@
     --pb-alert-info-bg: #7b11d7;
     --pb-alert-info-color: #d980f9;
     --pb-alert-danger-bg: #9b0b34;
-    --pb-alert-danger-color: #F12E65;
+    --pb-alert-danger-color: #f12e65;
     --pb-alert-warning-bg: #bb8d09;
     --pb-alert-warning-color: #fcc014;
 
@@ -399,6 +399,12 @@ button:focus-visible,
   text-align: center;
   transition: opacity .15s linear;
   opacity: 0;
+}
+
+@media (prefers-contrast: more) {
+  .masonry .masonry__metadata {
+    background-color: rgba(var(--pb-metadata-bg-rgb), 1);
+  }
 }
 
 .masonry__item:hover .masonry__metadata,
