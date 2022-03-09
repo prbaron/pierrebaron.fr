@@ -18,7 +18,8 @@ async function imageShortcode(src, alt, sizes = "100vw") {
     ],
     formats: [
       "webp",
-      "jpeg"
+      "jpeg",
+      "png",
     ],
     outputDir: '_site/img',
   });

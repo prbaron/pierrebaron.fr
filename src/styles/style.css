@@ -54,7 +54,7 @@
   :root {
     --pb-body-bg: #0e1424;
     --pb-body-color: #e5eaf5;
-    --pb-link-color: #61a2ff;
+    --pb-link-color: #277cf4;
 
     --pb-title-color-1: #a5fecb;
     --pb-title-color-2: #20bdff;
@@ -66,31 +66,30 @@
 
     --pb-metadata-bg-rgb: 0, 0, 0;
 
-    --pb-btn-primary-bg: #61a2ff;
-    --pb-btn-primary-color: #fff;
-    --pb-btn-primary-hover-bg: #61a2ff;
-    --pb-btn-primary-active-bg: #61a2ff;
+    --pb-btn-primary-bg: #277cf4;
+    --pb-btn-primary-color: #0e1424;
+    --pb-btn-primary-hover-bg: #4790f6;
+    --pb-btn-primary-active-bg: #68a3f7;
 
-    --pb-btn-secondary-bg: transparent;
+    --pb-btn-secondary-bg: #17223d;
     --pb-btn-secondary-color: #fff;
-    --pb-btn-secondary-hover-bg: #17223d;
-    --pb-btn-secondary-active-bg: #17223d;
+    --pb-btn-secondary-hover-bg: #203056;
+    --pb-btn-secondary-active-bg: #2a3d6e;
 
-    --pb-btn-inverse-bg: #e5eaf5;
-    --pb-btn-inverse-color: #0e1424;
-    --pb-btn-inverse-hover-bg: #e5eaf5;
-    --pb-btn-inverse-active-bg: #e5eaf5;
+    --pb-btn-tertiary-bg: transparent;
+    --pb-btn-tertiary-color: #e5eaf5;
+    --pb-btn-tertiary-hover-bg: #17223d;
+    --pb-btn-tertiary-active-bg: #1c2949;
 
     --pb-btn-success-bg: #399b71;
     --pb-btn-success-color: #121b31;
     --pb-btn-success-hover-bg: #399b71;
     --pb-btn-success-active-bg: #399b71;
 
-
     --pb-alert-info-bg: #7b11d7;
     --pb-alert-info-color: #d980f9;
     --pb-alert-danger-bg: #9b0b34;
-    --pb-alert-danger-color: #ed2960;
+    --pb-alert-danger-color: #F12E65;
     --pb-alert-warning-bg: #bb8d09;
     --pb-alert-warning-color: #fcc014;
 

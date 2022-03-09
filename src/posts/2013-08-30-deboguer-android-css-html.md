@@ -21,8 +21,8 @@ Attention, il vous faut au minimum la version 28 pour Chrome Desktop et la versi
 
 ### Installer le plugin ADB pour Google Chrome 28
 
-Il suffit d'installer le plugin [ADB](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) comme n'importe quel autre plugin Chrome en cliquant sur le bouton **Installer**. L'icône suivante va s'afficher à droite de votre barre d'adresse.  
-![bouton ADB plugin](/img/2013/08/30/adb-plugin-button.png)
+Il suffit d'installer le plugin [ADB](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) comme n'importe quel autre plugin Chrome en cliquant sur le bouton **Installer**. L'icône suivante va s'afficher à droite de votre barre d'adresse.
+{% image './src/img/2013/08/30/adb-plugin-button.png', "bouton ADB plugin" %}
 
 
 ### Préparer le téléphone pour le débogage USB
@@ -36,7 +36,7 @@ Si vous utilisez Android 4.2+, ces options sont camouflées. Pour les afficher, 
   * Revenez dans les paramètres générales, l'onglet va se trouver juste avant **A propos de ce téléphone**
 
 Une fois que vous êtes dans les options développeur, il vous faut cocher l'option **Débogage USB**. 
-![Activer le débogage USB dans les paramètres](/img/2013/08/30/settings-activate-usb-remote.png)
+{% image './src/img/2013/08/30/settings-activate-usb-remote.png', "Activer le débogage USB dans les paramètres" %}
 
 
 ### Activer le débogage USB dans Chrome Android
@@ -49,17 +49,16 @@ Pour cela :
   * Allez dans **Outils de Développement**
   * cochez **Activer le déblocage USB pour le web**
   
-![Activer le débogage USB dans Google Chrome Android](/img/2013/08/30/chrome-activate-usb-remote.png)
-
+{% image './src/img/2013/08/30/chrome-activate-usb-remote.png', "Activer le débogage USB dans Google Chrome Android" %}
   
 ### Utiliser le plugin
 Tout est complètement configuré, nous allons maintenant pouvoir utiliser le plugin. Pour cela, veuillez brancher votre téléphone Android à votre ordinateur via USB. Vous pouvez ouvrir votre site web préféré sur votre téléphone.
 
 Veuillez cliquez sur l'icône ajoutée à votre barre d'adresse puis sur **Start ADB**. Cela va permettre au plugin de rechercher votre appareil Android.  
-![Activer ADB](/img/2013/08/30/adb-plugin-menu.png)
+{% image './src/img/2013/08/30/adb-plugin-menu.png', "Activer ADB" %}
 
 Veuillez cliquer sur **View Inspection targets**.  
-![Activer ADB](/img/2013/08/30/adb-plugin-menu-active.png)
+{% image './src/img/2013/08/30/adb-plugin-menu-active.png', "Activer ADB" %}
 
 Cela vous mènera sur la page  [chrome://inspect/](chrome://inspect/).
 Vous pourrez ainsi voir toutes les pages ouvertes sur votre téléphone Android. Il vous suffit de cliquer sur **Inspect** pour ouvrir la console de débogage et ainsi avoir la puissance de Chrome Desktop sur votre appareil mobile.
