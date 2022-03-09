@@ -16,15 +16,18 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.0",
+    "@11ty/eleventy-img": "^1.1.0",
     "@11ty/eleventy-navigation": "0.3.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "4.0.0",
     "@sindresorhus/slugify": "1.1.2",
     "autoprefixer": "10.4.1",
+    "lodash": "^4.17.21",
     "luxon": "2.3.0",
     "markdown-it": "12.3.2",
     "markdown-it-anchor": "8.4.1",
     "markdown-it-container": "3.0.0",
     "node-fetch": "2.6.6",
-    "postcss": "8.4.5"
+    "postcss": "8.4.5",
+    "sharp": "^0.30.2"
   }
 }

@@ -2,7 +2,9 @@
 layout: layouts/home.njk
 ---
 
-<h1 class="title">Hey!<br/>I am Pierre Baron<br/>Frontend developer</h1>
+<div class="tagline">
+  <h1 class="title">Hey!<br/>I am Pierre Baron<br/>Frontend developer</h1>
+</div>
 
 <div class="prose">
   <h2>About me</h2>
@@ -44,7 +46,8 @@ layout: layouts/home.njk
   <section class="masonry">
     {%- for game in games -%}
       <a href="{{ game.url }}" class="masonry__item" aria-label="View {{ game.name }} on {{ game.platform }} on Metacritic">
-        <img src="{{ game.thumbnail }}" alt="{{ game.name }}" loading="lazy"/>
+        {% image game.thumbnail, game.name %}
+
         <div class="masonry__metadata">
           <div>{{ game.name }}</div>
         </div>
@@ -60,7 +63,7 @@ layout: layouts/home.njk
   <section class="masonry">
     {%- for comic in comics -%}
       <a href="{{ comic.url }}" class="masonry__item" aria-label="View {{ comic.name }} on {{ comic.website }}">
-        <img src="{{ comic.thumbnail }}" alt="{{ comic.name }}" loading="lazy"/>
+        {% image comic.thumbnail, comic.name %}
         <div class="masonry__metadata">
           <div>{{ comic.name }}</div>
         </div>
@@ -78,26 +81,25 @@ layout: layouts/home.njk
           <ol class="list-unstyled">
             {%- for track in tracks -%}
               <li class="track">
-                <a href="{{ track.url }}" class="btn btn-secondary btn-transparent" aria-label="Play {{ track.name }} by {{ track.artist }} on Spotify">
-                  <img src="{{ track.album.thumbnail }}" alt="{{ track.album.name }}" loading="lazy">
+                <a href="{{ track.url }}" class="btn btn-tertiary" aria-label="Play {{ track.name }} by {{ track.artist }} on Spotify">
+                  {% image track.album.thumbnail, track.album.name %}
                   <div class="track_metadata">
                     <div>{{ track.name }}</div>
                     <div class="text-muted"><small>{{ track.artist }}</small></div>
                   </div>
 
-                  <div class="track_play">
+                  <div class="track_play btn btn-success">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="26"
-                        height="26"
+                        width="18"
+                        height="18"
                         fill="currentColor"
                         viewBox="0 0 256 256"
                         aria-hidden="true"
                     >
-                      <rect width="256" height="256" fill="none"></rect>
                       <path
-                          d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z" fill="none" stroke="currentColor" stroke-linecap="round"
-                          stroke-linejoin="round" stroke-width="16"
+                          d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z" fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="24"
                       ></path>
                     </svg>
                   </div>

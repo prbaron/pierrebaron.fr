@@ -6,7 +6,9 @@ eleventyNavigation:
   order: 3
 ---
 
-<h1 class="title">Blog</h1>
+<div class="tagline">
+  <h1 class="title">Blog</h1>
+</div>
 
 <ol class="list-unstyled">
   {% for post in collections.posts | reverse %}
@@ -14,8 +16,10 @@ eleventyNavigation:
       <a href="{{ post.url | url }}">
         <h2>{{ post.data.title }}</h2>
       </a>
+      <div>
+        <time datetime="{{ post.date | readableDate('yyyy-LL-dd') }}" class="text-muted">{{ post.date | readableDate }}</time>
+      </div>
       {{ post.data.page.excerpt | safe }}
-      <time datetime="{{ post.date | readableDate('yyyy-LL-dd') }}">{{ post.date | readableDate }}</time>
     </li>
   {% endfor %}
 </ol>

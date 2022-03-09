@@ -6,7 +6,9 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1 class="title">The companies I worked at</h1>
+<div class="tagline">
+  <h1 class="title">The companies I worked at</h1>
+</div>
 
 <ul class="list-unstyled">
   {% for company, jobs in collections.jobsByCompany %}
@@ -18,7 +20,7 @@ eleventyNavigation:
       <ol class="list-unstyled jobs">
         {% for job in jobs %}
           <li>
-            <a href="{{ job.url | url }}" class="btn btn-secondary btn-transparent btn-block text-left">
+            <a href="{{ job.url | url }}" class="btn btn-tertiary btn-block text-align-left">
               <div>{{ job.data.title }}</div>
               <div class="text-muted">{{ job.data.start | readableDate }} - {{ job.data.end | readableDate }}</div>
             </a>

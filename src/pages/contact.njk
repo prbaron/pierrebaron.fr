@@ -7,14 +7,15 @@ eleventyNavigation:
   order: 4
 ---
 
-<h1 class="title">Let's stay in touch!</h1>
+<div class="tagline">
+  <h1 class="title">Let's stay in touch!</h1>
+</div>
 
 <div class="row">
-  <div class="col-lg-6 col-md-8">
-    <div class="hline"></div>
-    <form name="contact" netlify>
+  <div class="col">
+    <form name="contact" method="POST" data-netlify="true">
       <div class="form-group">
-        <label for="name" class="control-label">Nom</label>
+        <label for="name" class="control-label">Name</label>
         <input id="name" name="name" type="text" class="form-control" required/>
       </div>
 
@@ -25,11 +26,11 @@ eleventyNavigation:
 
       <div class="form-group">
         <label for="message" class="control-label">Message</label>
-        <textarea id="message" name="message" class="form-control" spellcheck="true"  rows="7" required></textarea>
+        <textarea id="message" name="message" class="form-control" spellcheck="true" rows="7" required></textarea>
       </div>
 
       <div class="form-group">
-        <input id="saveForm" name="saveForm" class="submit btn btn-primary" type="submit" value="Envoyer"/>
+        <button type="submit" class="submit btn btn-primary">Send</button>
       </div>
     </form>
   </div>

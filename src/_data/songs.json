@@ -6,7 +6,7 @@
       "artist": "fin",
       "album": {
         "name": "Lost at Sea",
-        "thumbnail": "/img/spotify/lost-at-sea.jpg"
+        "thumbnail": "./src/img/spotify/lost-at-sea.jpg"
       },
       "url": "https://open.spotify.com/track/7EioHGLoCcjuIgQwKh8O8H"
     },
@@ -16,7 +16,7 @@
       "artist": "Catherine Feeny",
       "album": {
         "name": "Hurricane Glass",
-        "thumbnail": "/img/spotify/hurricane-glass.jpg"
+        "thumbnail": "./src/img/spotify/hurricane-glass.jpg"
       },
       "url": "https://open.spotify.com/track/6ta5yavnnEfCE4faU0jebM"
     },
@@ -26,7 +26,7 @@
       "artist": "HIIT BPM",
       "album": {
         "name": "Bring Sally Up - Workout",
-        "thumbnail": "/img/spotify/bring-sally-up-workout.jpg"
+        "thumbnail": "./src/img/spotify/bring-sally-up-workout.jpg"
       },
       "url": "https://open.spotify.com/track/6IB7b4cXvYPhQsQHdmn1uE"
     },
@@ -36,7 +36,7 @@
       "artist": "Bishop Briggs",
       "album": {
         "name": "Church Of Scars",
-        "thumbnail": "/img/spotify/church-of-scars.jpg"
+        "thumbnail": "./src/img/spotify/church-of-scars.jpg"
       },
       "url": "https://open.spotify.com/track/2ph6BRhGcUzc2W9wIulG5k"
     },
@@ -46,7 +46,7 @@
       "artist": "Loïc Nottet",
       "album": {
         "name": "Sillygomania",
-        "thumbnail": "/img/spotify/sillygomania.jpg"
+        "thumbnail": "./src/img/spotify/sillygomania.jpg"
       },
       "url": "https://open.spotify.com/track/22juTts8TAnJYwGnlxB87e"
     },
@@ -56,7 +56,7 @@
       "artist": "Tones And I",
       "album": {
         "name": "Dance Monkey (Stripped Back) / Dance Monkey",
-        "thumbnail": "/img/spotify/dance-monkey-stripped-back-dance-monkey.jpg"
+        "thumbnail": "./src/img/spotify/dance-monkey-stripped-back-dance-monkey.jpg"
       },
       "url": "https://open.spotify.com/track/2XU0oxnq2qxCpomAAuJY8K"
     },
@@ -66,7 +66,7 @@
       "artist": "Catherine Feeny",
       "album": {
         "name": "Hurricane Glass",
-        "thumbnail": "/img/spotify/hurricane-glass.jpg"
+        "thumbnail": "./src/img/spotify/hurricane-glass.jpg"
       },
       "url": "https://open.spotify.com/track/3fz99BpIGmTBib2WnuOfDC"
     },
@@ -76,7 +76,7 @@
       "artist": "Chaos Chaos",
       "album": {
         "name": "Committed to the Crime",
-        "thumbnail": "/img/spotify/committed-to-the-crime.jpg"
+        "thumbnail": "./src/img/spotify/committed-to-the-crime.jpg"
       },
       "url": "https://open.spotify.com/track/3lOok0REf4j3790abX26PR"
     },
@@ -86,7 +86,7 @@
       "artist": "P!nk",
       "album": {
         "name": "Walk Me Home",
-        "thumbnail": "/img/spotify/walk-me-home.jpg"
+        "thumbnail": "./src/img/spotify/walk-me-home.jpg"
       },
       "url": "https://open.spotify.com/track/7DHApOHsIFo7EyfieArYGE"
     },
@@ -96,7 +96,7 @@
       "artist": "BARON.E",
       "album": {
         "name": "Un verre d'ego",
-        "thumbnail": "/img/spotify/un-verre-d-ego.jpg"
+        "thumbnail": "./src/img/spotify/un-verre-d-ego.jpg"
       },
       "url": "https://open.spotify.com/track/2qz4P0dRkU0GwM6brD44kz"
     }
@@ -108,7 +108,7 @@
       "artist": "Ben Mazué",
       "album": {
         "name": "Paradis",
-        "thumbnail": "/img/spotify/paradis.jpg"
+        "thumbnail": "./src/img/spotify/paradis.jpg"
       },
       "url": "https://open.spotify.com/track/3ygCuM7hKC3yOxgErQjhcT"
     },
@@ -118,7 +118,7 @@
       "artist": "Arcadian",
       "album": {
         "name": "Marche ou rêve",
-        "thumbnail": "/img/spotify/marche-ou-reve.jpg"
+        "thumbnail": "./src/img/spotify/marche-ou-reve.jpg"
       },
       "url": "https://open.spotify.com/track/6kY3qTo0dfApoBfE7EFGDq"
     },
@@ -128,7 +128,7 @@
       "artist": "Venus VNR",
       "album": {
         "name": "J'attends que ça passe",
-        "thumbnail": "/img/spotify/j-attends-que-ca-passe.jpg"
+        "thumbnail": "./src/img/spotify/j-attends-que-ca-passe.jpg"
       },
       "url": "https://open.spotify.com/track/1mlmK3qHNXAYJyIaihOupD"
     },
@@ -138,7 +138,7 @@
       "artist": "Checler",
       "album": {
         "name": "Checler",
-        "thumbnail": "/img/spotify/checler.jpg"
+        "thumbnail": "./src/img/spotify/checler.jpg"
       },
       "url": "https://open.spotify.com/track/63IlYsLcrJ7EdPOaGBgMfs"
     },
@@ -148,7 +148,7 @@
       "artist": "The Longest Johns",
       "album": {
         "name": "Between Wind and Water",
-        "thumbnail": "/img/spotify/between-wind-and-water.jpg"
+        "thumbnail": "./src/img/spotify/between-wind-and-water.jpg"
       },
       "url": "https://open.spotify.com/track/3oUuRNgyIuiqVTWLCChp3s"
     },
@@ -158,7 +158,7 @@
       "artist": "Manau",
       "album": {
         "name": "Nouvelle vague",
-        "thumbnail": "/img/spotify/nouvelle-vague.jpg"
+        "thumbnail": "./src/img/spotify/nouvelle-vague.jpg"
       },
       "url": "https://open.spotify.com/track/1TOOLopTR4eOMhwFEQ26ez"
     },
@@ -168,7 +168,7 @@
       "artist": "Helix Jr",
       "album": {
         "name": "Countryside EP",
-        "thumbnail": "/img/spotify/countryside-ep.jpg"
+        "thumbnail": "./src/img/spotify/countryside-ep.jpg"
       },
       "url": "https://open.spotify.com/track/2LeCtzDjidH3yXbp009YNj"
     },
@@ -178,7 +178,7 @@
       "artist": "HIIT BPM",
       "album": {
         "name": "Bring Sally Up - Workout",
-        "thumbnail": "/img/spotify/bring-sally-up-workout.jpg"
+        "thumbnail": "./src/img/spotify/bring-sally-up-workout.jpg"
       },
       "url": "https://open.spotify.com/track/6IB7b4cXvYPhQsQHdmn1uE"
     },
@@ -188,7 +188,7 @@
       "artist": "Gauvain Sers",
       "album": {
         "name": "En quarantaine",
-        "thumbnail": "/img/spotify/en-quarantaine.jpg"
+        "thumbnail": "./src/img/spotify/en-quarantaine.jpg"
       },
       "url": "https://open.spotify.com/track/0HrHE3VsbXRrxTQF9EMDgg"
     },
@@ -198,7 +198,7 @@
       "artist": "David Bowie",
       "album": {
         "name": "Hunky Dory (2015 Remaster)",
-        "thumbnail": "/img/spotify/hunky-dory-2015-remaster.jpg"
+        "thumbnail": "./src/img/spotify/hunky-dory-2015-remaster.jpg"
       },
       "url": "https://open.spotify.com/track/3ZE3wv8V3w2T2f7nOCjV0N"
     }

@@ -4,41 +4,23 @@ templateClass:
 ---
 
 <article class="container post">
-  <header>
+  <header class="tagline">
     <h1 class="title">{{ title }}</h1>
     <div>
       <time class="text-muted" datetime="{{ page.date | readableDate('yyyy-LL-dd') }}">{{ page.date | readableDate }}</time>
     </div>
     {%- if(demo or download) %}
-      {%- if(demo) %}
-        <a href="{{ demo | url }}" class="btn btn-primary">Demonstration</a>
-      {%- endif %}
-      {%- if(download) %}
-        <a href="{{ download | url }}" class="btn btn-inverse">Sources</a>
-      {%- endif %}
+      <div class="sources">
+        {%- if(demo) %}
+          <a href="{{ demo | url }}" class="btn btn-primary">Demonstration</a>
+        {%- endif %}
+        {%- if(download) %}
+          <a href="{{ download | url }}" class="btn btn-secondary">Sources</a>
+        {%- endif %}
+      </div>
     {%- endif %}
   </header>
   <div class="prose">
-
     {{ content | safe }}
   </div>
 </article>
-
-{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-{%- if nextPost or previousPost %}
-  <nav class="container pager">
-    <ul>
-      <li>
-        {%- if previousPost %}
-          <a class="pagerItem" href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
-        {% endif %}
-      </li>
-      <li>
-        {%- if nextPost %}
-          <a class="pagerItem" href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
-        {% endif %}
-      </li>
-    </ul>
-  </nav>
-{%- endif %}

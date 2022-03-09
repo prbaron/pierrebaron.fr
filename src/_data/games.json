@@ -2,43 +2,43 @@
   {
     "name": "GoldenEye",
     "platform": "Nintendo 64",
-    "thumbnail": "/img/games/goldeneye.jpg",
+    "thumbnail": "./src/img/games/goldeneye.jpg",
     "url": "https://www.metacritic.com/game/nintendo-64/goldeneye-007"
   },
   {
     "name": "The legend of Zelda: Ocarina of Time",
     "platform": "Nintendo 64",
-    "thumbnail": "/img/games/legend-of-zelda-ocarina-of-time.jpg",
+    "thumbnail": "./src/img/games/legend-of-zelda-ocarina-of-time.jpg",
     "url": "https://www.metacritic.com/game/nintendo-64/the-legend-of-zelda-ocarina-of-time"
   },
   {
     "name": "The Witcher 3",
     "platform": "PC",
-    "thumbnail": "/img/games/witcher-3.jpg",
+    "thumbnail": "./src/img/games/witcher-3.jpg",
     "url": "https://www.metacritic.com/game/pc/the-witcher-3-wild-hunt"
   },
   {
     "name": "Grand Theft Auto: Vice City",
     "platform": "PC",
-    "thumbnail": "/img/games/gta-vice-city.jpg",
+    "thumbnail": "./src/img/games/gta-vice-city.jpg",
     "url": "https://www.metacritic.com/game/pc/grand-theft-auto-vice-city"
   },
   {
     "name": "Red Dead Redemption",
     "platform": "Xbox 360",
-    "thumbnail": "/img/games/red-dead-redemption.jpg",
+    "thumbnail": "./src/img/games/red-dead-redemption.jpg",
     "url": "https://www.metacritic.com/game/xbox-360/red-dead-redemption"
   },
   {
     "name": "Ori and the Will of the Wips",
     "platform": "PC",
-    "thumbnail": "/img/games/ori-and-the-will-of-the-wisps.jpg",
+    "thumbnail": "./src/img/games/ori-and-the-will-of-the-wisps.jpg",
     "url": "https://www.metacritic.com/game/pc/ori-and-the-will-of-the-wisps"
   },
   {
     "name": "Prince of Persia: The sands of time",
     "platform": "PC",
-    "thumbnail": "/img/games/pop-sands-of-time.jpg",
+    "thumbnail": "./src/img/games/pop-sands-of-time.jpg",
     "url": "https://www.metacritic.com/game/pc/prince-of-persia-the-sands-of-time"
   }
 ]

@@ -8,8 +8,39 @@ const markdownItContainer = require('markdown-it-container');
 const { createContainer } = require('./eleventy/container');
 const slugify = require('@sindresorhus/slugify');
 const _ = require("lodash");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes = "100vw") {
+  let metadata = await Image(src, {
+    widths: [
+      300,
+      600
+    ],
+    formats: [
+      "webp",
+      "jpeg"
+    ],
+    outputDir: '_site/img',
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes, {
+    whitespaceMode: "inline"
+  });
+}
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
   // Add plugins
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -35,6 +66,13 @@ module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/styles');
+
+  eleventyConfig.addPassthroughCopy('src/android-chrome-192x192.png');
+  eleventyConfig.addPassthroughCopy('src/android-chrome-512x512.png');
+  eleventyConfig.addPassthroughCopy('src/apple-touch-icon.png');
+  eleventyConfig.addPassthroughCopy('src/favicon.ico');
+  eleventyConfig.addPassthroughCopy('src/favicon.svg');
+  eleventyConfig.addPassthroughCopy('src/site.webmanifest');
 
   // Customize Markdown library and settings:
   const markdownLibrary = markdownIt({
