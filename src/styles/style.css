@@ -45,7 +45,6 @@
   --pb-form-color: var(--pb-body-color);
 }
 
-
 /**
  * Dark mode
  */
@@ -72,7 +71,7 @@
     --pb-btn-primary-active-bg: #68a3f7;
 
     --pb-btn-secondary-bg: #17223d;
-    --pb-btn-secondary-color: var(--pb-body-color);;
+    --pb-btn-secondary-color: var(--pb-body-color);
     --pb-btn-secondary-hover-bg: #203056;
     --pb-btn-secondary-active-bg: #2a3d6e;
 
@@ -103,13 +102,14 @@
   }
 }
 
-
 /**
  * CSS Reset
  * https://www.joshwcomeau.com/css/custom-css-reset/
  */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -122,28 +122,41 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-
 
 /**
  * SCAFFOLDING
  */
 
 body {
-  background-color: var(--pb-body-bg);;
+  background-color: var(--pb-body-bg);
   color: var(--pb-body-color);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -163,7 +176,6 @@ button:focus-visible,
   outline: 3px solid var(--pb-link-color);
   outline-offset: 3px;
 }
-
 
 /**
  * ALERTS
@@ -197,7 +209,6 @@ button:focus-visible,
   color: var(--pb-alert-warning-color);
 }
 
-
 /**
  * Container
  */
@@ -207,7 +218,6 @@ button:focus-visible,
   padding: 0 16px;
   margin: 0 auto;
 }
-
 
 /**
  * HEADER
@@ -256,7 +266,7 @@ button:focus-visible,
   overflow: hidden;
   user-select: none;
   pointer-events: none;
-  font-weight: bold
+  font-weight: bold;
 }
 
 @media speech {
@@ -293,7 +303,12 @@ button:focus-visible,
 }
 
 .title {
-  background-image: linear-gradient(135deg, var(--pb-title-color-1), var(--pb-title-color-2), var(--pb-title-color-3));
+  background-image: linear-gradient(
+    135deg,
+    var(--pb-title-color-1),
+    var(--pb-title-color-2),
+    var(--pb-title-color-3)
+  );
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -313,19 +328,16 @@ button:focus-visible,
   }
 }
 
-
 .tagline {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-
 
 @media screen and (min-width: 480px) {
   .tagline {
     margin-bottom: 3rem;
   }
 }
-
 
 /**
  * Index page
@@ -349,7 +361,7 @@ button:focus-visible,
   break-inside: avoid;
   position: relative;
   border-radius: 8px;
-  border: 1px solid rgba(var(--pb-metadata-bg-rgb) .05);
+  border: 1px solid rgba(var(--pb-metadata-bg-rgb) 0.05);
 }
 
 .masonry .masonry__item img,
@@ -368,14 +380,14 @@ button:focus-visible,
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(var(--pb-metadata-bg-rgb), .8);
+  background-color: rgba(var(--pb-metadata-bg-rgb), 0.8);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 8px;
   text-align: center;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
   opacity: 0;
 }
 
@@ -404,8 +416,8 @@ button:focus-visible,
 }
 
 .track img {
-  border: 1px solid rgba(var(--pb-metadata-bg-rgb), .1);
-  box-shadow: 0 3px 3px rgba(var(--pb-metadata-bg-rgb), .05);
+  border: 1px solid rgba(var(--pb-metadata-bg-rgb), 0.1);
+  box-shadow: 0 3px 3px rgba(var(--pb-metadata-bg-rgb), 0.05);
   border-radius: 8px;
   margin-right: 8px;
 }
@@ -415,18 +427,22 @@ button:focus-visible,
 }
 
 .btn.track_play {
-  border-radius: 50%;
-  padding: 8px;
-
-  transition: opacity .15s linear;
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  transition: opacity 0.15s linear;
   opacity: 0;
+}
+
+.track_play svg {
+  display: block;
+  margin-right: 4px;
 }
 
 .track > a:hover > .track_play,
 .track > a:focus > .track_play {
   opacity: 1;
 }
-
 
 /**
  * Blog
@@ -435,7 +451,6 @@ button:focus-visible,
 .blog-post + .blog-post {
   margin-top: 2rem;
 }
-
 
 /**
  * Jobs page
@@ -481,15 +496,12 @@ button:focus-visible,
   box-shadow: 0 0 0 4px var(--pb-body-bg), 0 0 0 6px var(--pb-border-color);
 }
 
-
 /**
  * Blog page
  */
 
 .blog-post {
-
 }
-
 
 /**
  * POST
@@ -500,12 +512,12 @@ button:focus-visible,
 }
 
 .post header h1 {
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .sources {
   display: block;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .sources .btn {
@@ -513,7 +525,7 @@ button:focus-visible,
 }
 
 .sources .btn + .btn {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 @media screen and (min-width: 480px) {
@@ -527,7 +539,7 @@ button:focus-visible,
   }
 
   .sources .btn + .btn {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     margin-top: 0;
   }
 }
@@ -562,8 +574,8 @@ button:focus-visible,
 .prose blockquote {
   font-weight: 500;
   font-style: italic;
-  border-left: .25rem solid #e5e7eb;
-  quotes: "\201C" "\201D" "\2018" "\2019";
+  border-left: 0.25rem solid #e5e7eb;
+  quotes: "\201C""\201D""\2018""\2019";
   margin: 1.6em 0;
   padding-left: 1em;
 }
@@ -604,8 +616,8 @@ button:focus-visible,
   font-size: 1.266rem;
   font-weight: 600;
   line-height: 1.5rem;
-  margin-bottom: .75rem;
-  margin-top: .75rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
 }
 
 .prose h5 {
@@ -643,7 +655,6 @@ button:focus-visible,
     line-height: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-
   }
 
   .prose h5 {
@@ -690,7 +701,7 @@ button:focus-visible,
 }
 
 pre[class*="language-"] {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
 code[class*="language-"]::before,
@@ -698,15 +709,14 @@ code[class*="language-"]::after {
   content: "";
 }
 
-.prose :is(h1,h2,h3,h4,h5,h6) a {
+.prose :is(h1, h2, h3, h4, h5, h6) a {
   font-weight: inherit;
   text-decoration: none;
 }
 
-.prose :is(h1,h2,h3,h4,h5,h6) a:hover {
+.prose :is(h1, h2, h3, h4, h5, h6) a:hover {
   text-decoration: underline;
 }
-
 
 /**
  * Contact
@@ -714,7 +724,7 @@ code[class*="language-"]::after {
 
 .control-label {
   display: block;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .form-control {
@@ -729,7 +739,7 @@ code[class*="language-"]::after {
   -moz-appearance: none;
   appearance: none;
   border-radius: 6px;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .form-control:focus {
@@ -762,7 +772,8 @@ code[class*="language-"]::after {
   padding: 6px 18px;
   font-size: 1rem;
   border-radius: 6px;
-  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 a.btn {
@@ -873,49 +884,4 @@ a.btn-success:active {
 .list-unstyled {
   list-style: none;
   padding: 0;
-}
-
-
-/*
- Margin and rounding are personal preferences,
- overflow-x-auto is recommended.
-*/
-pre {
-  border-radius: 0.25rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  overflow-x: auto;
-}
-
-/*
- Add some vertical padding and expand the width
- to fill its container. The horizontal padding
- comes at the line level so that background
- colors extend edge to edge.
-*/
-pre.torchlight code {
-  display: block;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-/*
- Horizontal line padding to match the vertical
- padding from the code block above.
-*/
-pre.torchlight code .line {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/*
- Push the code away from the line numbers and
- summary caret indicators.
-*/
-pre.torchlight code .line-number,
-pre.torchlight code .summary-caret {
-  margin-right: 1rem;
 }

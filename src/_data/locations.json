@@ -1,13 +1,8 @@
 [
   {
-    "from": "2015-04-28",
-    "name": "London, UK",
-    "flag": "\uD83C\uDDEC\uD83C\uDDE7"
-  },
-  {
-    "from": "2012-11-11",
-    "to": "2015-04-28",
-    "name": "Lannion, France",
+    "from": "1989-04-05",
+    "to": "2007-09-01",
+    "name": "St Brieuc, France",
     "flag": "\uD83C\uDDEB\uD83C\uDDF7"
   },
   {
@@ -17,9 +12,14 @@
     "flag": "\uD83C\uDDEB\uD83C\uDDF7"
   },
   {
-    "from": "1989-04-05",
-    "to": "2007-09-01",
-    "name": "St Brieuc, France",
+    "from": "2012-11-11",
+    "to": "2015-04-28",
+    "name": "Lannion, France",
     "flag": "\uD83C\uDDEB\uD83C\uDDF7"
+  },
+  {
+    "from": "2015-04-28",
+    "name": "London, UK",
+    "flag": "\uD83C\uDDEC\uD83C\uDDE7"
   }
 ]
